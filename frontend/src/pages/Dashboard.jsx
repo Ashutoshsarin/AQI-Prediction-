@@ -40,7 +40,7 @@ function Dashboard() {
     setLoading(true);
     setError("");
     try {
-      const res = await axios.post("http://127.0.0.1:5000/predict-city", { city: searchCity });
+      const res = await axios.post("https://aqi-prediction-5-260s.onrender.com/predict-city", { city: searchCity });
       setResult(res.data);
       setSearchedCity(searchCity);
     } catch {

@@ -1,4 +1,5 @@
 import { useState } from "react";
+// http://127.0.0.1:5000/predict-city
 import axios from "axios";
 import SearchBar from "../components/SearchBar";
 import {
@@ -45,7 +46,7 @@ export default function Predict() {
     setError("");
     setResult(null);
     try {
-      const res = await axios.post("http://127.0.0.1:5000/predict-city", { city });
+      const res = await axios.post("https://aqi-prediction-5-260s.onrender.com/predict-city", { city });
       setResult(res.data);
     } catch {
       setError("City not found or server error.");
