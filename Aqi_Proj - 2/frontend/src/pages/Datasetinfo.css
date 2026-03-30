@@ -1,0 +1,261 @@
+.dataset-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+.ds-header {
+  margin-bottom: 28px;
+}
+
+.ds-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 6px;
+}
+
+.ds-sub {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ── Stat cards — 4 columns side by side ── */
+.ds-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ds-stat-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  border-top: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ds-blue   { border-top-color: #3b82f6; }
+.ds-cyan   { border-top-color: #06b6d4; }
+.ds-purple { border-top-color: #8b5cf6; }
+.ds-green  { border-top-color: #10b981; }
+
+.ds-val {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1.1;
+}
+
+.ds-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.ds-sub-text {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* ── Schema ── */
+.ds-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+.ds-card-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+
+.schema-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.schema-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+  flex-wrap: wrap;
+}
+
+.schema-row:last-child {
+  border-bottom: none;
+}
+
+.schema-col {
+  font-size: 0.82rem;
+  color: #0891b2;
+  background: #ecfeff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  min-width: 160px;
+  font-family: monospace;
+}
+
+.schema-type {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  min-width: 56px;
+  text-align: center;
+}
+
+.type-string  { background: #fef3c7; color: #d97706; }
+.type-integer { background: #eff6ff; color: #2563eb; }
+
+.schema-desc {
+  font-size: 0.82rem;
+  color: #64748b;
+  flex: 1;
+}
+
+.schema-badge {
+  margin-left: auto;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.badge-feature { background: #eff6ff; color: #2563eb; }
+.badge-target  { background: #f0fdf4; color: #16a34a; }
+
+/* ── Table ── */
+.ds-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ds-search {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  outline: none;
+  color: #1e293b;
+  width: 240px;
+  background: #f8fafc;
+}
+
+.ds-search:focus {
+  border-color: #3b82f6;
+  background: #fff;
+}
+
+.ds-table-wrap {
+  overflow-x: auto;
+}
+
+.ds-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.83rem;
+}
+
+.ds-table th {
+  text-align: left;
+  padding: 8px 14px;
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f1f5f9;
+  white-space: nowrap;
+}
+
+.ds-table td {
+  padding: 12px 14px;
+  color: #475569;
+  border-bottom: 1px solid #f8fafc;
+  white-space: nowrap;
+}
+
+.ds-table tr:last-child td { border-bottom: none; }
+.ds-table tr:hover td { background: #f8fafc; }
+
+.cat-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid;
+}
+
+.ds-footer {
+  margin-top: 12px;
+  font-size: 0.77rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .ds-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* 🌍 Glass Welcome Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+  padding: 40px 30px;
+  max-width: 500px;
+  width: 90%;
+
+  color: #fff;
+  text-align: center;
+}
+
+/* Center card over map */
+.dash-empty-grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Optional: dark overlay for readability */
+.dash-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 0;
+}
+
+/* ensure content above overlay */
+.dash-empty-grid,
+.dash-searchbar,
+.dash-content {
+  position: relative;
+  z-index: 1;
+}

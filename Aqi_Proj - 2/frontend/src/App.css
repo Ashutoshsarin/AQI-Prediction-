@@ -1,0 +1,6 @@
+.main-content {
+  min-height: calc(100vh - 62px);
+  background: var(--bg-page);
+  transition: background 0.25s;
+  padding-top: 8px;   /* ← add this line */
+}

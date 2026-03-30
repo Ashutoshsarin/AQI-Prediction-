@@ -1,0 +1,241 @@
+.predict-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+.predict-header {
+  margin-bottom: 24px;
+}
+
+.predict-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 6px;
+}
+
+.predict-sub {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Search bar row */
+.predict-search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.predict-info {
+  text-align: center;
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.predict-error {
+  text-align: center;
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+/* Results layout */
+.predict-results {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Row with 2 columns */
+.predict-row-2 {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+}
+
+/* Generic card */
+.p-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.p-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 16px;
+}
+
+/* ── Summary card ── */
+.summary-city {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 2px;
+}
+
+.summary-country {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.summary-category {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.summary-meta {
+  font-size: 0.83rem;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.summary-meta strong {
+  color: #1e293b;
+}
+
+/* Pollutant mini bars */
+.summary-pollutants {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.sp-row {
+  display: grid;
+  grid-template-columns: 48px 1fr 36px;
+  align-items: center;
+  gap: 8px;
+}
+
+.sp-name {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.sp-bar-wrap {
+  background: #f1f5f9;
+  border-radius: 4px;
+  height: 7px;
+  overflow: hidden;
+}
+
+.sp-bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sp-val {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: right;
+}
+
+/* ── Models card ── */
+.models-card {
+  width: 100%;
+}
+
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+/* Individual model card */
+.model-card {
+  position: relative;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-top: 3px solid var(--mc, #e2e8f0);
+  border-radius: 12px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.model-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.model-card-best {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  border-top-color: var(--mc);
+}
+
+.best-badge {
+  position: absolute;
+  top: -1px;
+  right: 10px;
+  background: #10b981;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 0 0 6px 6px;
+}
+
+.mc-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #475569;
+  line-height: 1.3;
+}
+
+.mc-pred {
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.mc-error {
+  font-size: 0.75rem;
+  color: #ef4444;
+}
+
+.mc-conf-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mc-conf-track {
+  flex: 1;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.mc-conf-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mc-conf-val {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  min-width: 38px;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .predict-row-2 { grid-template-columns: 1fr; }
+  .models-grid   { grid-template-columns: repeat(2, 1fr); }
+}
